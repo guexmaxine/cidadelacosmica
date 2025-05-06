@@ -8,11 +8,11 @@ let filaDeEspera = [];
 let cadeiras = [];
 let personagensUsados = new Set();
 
-// 🎵 Sons
+
 const somAtender = new Audio("assets/atender.wav");
 const somConvidar = new Audio("assets/convidar.wav");
 
-// 🧠 Puxa personagem aleatório único (imagem + nome)
+
 async function obterPersonagemInfo() {
   let id;
   do {
@@ -25,7 +25,7 @@ async function obterPersonagemInfo() {
   return { image: data.image, name: data.name };
 }
 
-// 👤 Cria card de personagem com imagem e nome
+
 function criarPersonagem(imgSrc, nome = "") {
   const div = document.createElement("div");
   div.className = "personagem";
@@ -42,7 +42,7 @@ function criarPersonagem(imgSrc, nome = "") {
   return div;
 }
 
-// 🕒 Define temporizadores de borda
+
 function aplicarTemporizador(personagem) {
   setTimeout(() => personagem.style.borderColor = "orange", 5000);
   setTimeout(() => {
@@ -51,13 +51,13 @@ function aplicarTemporizador(personagem) {
   }, 10000);
 }
 
-// 💡 Efeito verde no botão clicado
+
 function cliqueTemporario(botao) {
   botao.classList.add("clicked");
   setTimeout(() => botao.classList.remove("clicked"), 300);
 }
 
-// 🚀 Inicializa com 12 personagens
+
 async function iniciarFila() {
   for (let i = 0; i < 12; i++) {
     const { image, name } = await obterPersonagemInfo();
@@ -69,7 +69,7 @@ async function iniciarFila() {
   preencherMesas();
 }
 
-// 🪑 Preenche mesas com quem está na fila
+
 function preencherMesas() {
   while (cadeiras.length < MAX_MESAS && filaDeEspera.length > 0) {
     const proximo = filaDeEspera.shift();
@@ -80,7 +80,7 @@ function preencherMesas() {
   }
 }
 
-// 🍺 Atende personagem da mesa
+
 function atender() {
   const botao = document.querySelector(".botao-atender");
   cliqueTemporario(botao);
@@ -109,7 +109,7 @@ function atender() {
   preencherMesas();
 }
 
-// ➡️ Adiciona novo personagem à fila
+
 async function convidarNovos() {
   const botao = document.querySelector(".botao-convidar");
   cliqueTemporario(botao);
