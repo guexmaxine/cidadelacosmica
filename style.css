@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background-color: #3a4859;
+  background-image:
+    linear-gradient(90deg, #4b5d6b 1px, transparent 1px),
+    linear-gradient(180deg, #4b5d6b 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+  margin: 10px 0;
+  color: #fc4c71;
+  font-size: 2rem;
+  letter-spacing: 1px;
+
+}
+
+h2 {
+  margin: 10px 0;
+  color: #35d0ba;
+  font-size: 1.5rem;
+
+}
+
+.logo {
+  width: 250px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bloco-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.barra-atendimento {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 10px;
+  background-color: #4b5d6b;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.15);
+  min-height: 120px;
+  border: 2px solid #35d0ba;
+}
+
+.barman {
+  width: 140px;
+  height: 160px;
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.barman img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.personagem {
+  width: 80px;
+  height: 110px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid #35d0ba;
+  background-color: #fff8dc;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  position: relative;
+  transition: border-color 0.5s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.personagem img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+}
+
+.nome-personagem {
+  background-color: #ccc;
+  color: #222;
+  font-size: 11px;
+  padding: 2px 4px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+  height: 30px;
+  line-height: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-top: 1px solid #aaa;
+}
+
+.sala-espera-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 768px;
+}
+
+.sala-espera {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  padding: 16px;
+  background-color: #4b5d6b;
+  border: 2px dashed #35d0ba;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.1);
+  min-height: 220px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+.botao-atender {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  background-color: #fc4c71;
+  color: white;
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.botao-atender.clicked {
+  background-color: #4caf50 !important;
+}
+
+.botao-convidar {
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  background-color: #fc4c71;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.botao-convidar.clicked {
+  background-color: #4caf50 !important;
+}
+
+.piscar {
+  animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+  0%, 100% { border-color: #fc4c71; }
+  50% { border-color: transparent; }
+}

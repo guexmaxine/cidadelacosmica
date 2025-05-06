@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar da Cidadela</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="assets/logo.png">
+
+    <div class="bloco-central">
+      <div class="barra-atendimento" id="atendimento">
+        <div class="barman">
+          <img src="assets/barman.png" alt="Barman" />
+        </div>
+
+      </div>
+
+
+      <button class="botao-atender" onclick="atender()">🍺</button>
+
+      <h2>Sala de Espera</h2>
+      <div class="sala-espera-wrapper">
+        <div class="sala-espera" id="sala-espera"></div>
+
+        <button class="botao-convidar" onclick="convidarNovos()">→</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
